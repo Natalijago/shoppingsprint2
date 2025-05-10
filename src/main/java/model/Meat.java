@@ -1,12 +1,7 @@
 package model;
 
-public class Meat {
-    int amount;
-    double price;
-    boolean isVegetarian = false;
-
-    Meat(double meatPrice, int meatAmount, boolean meatIsVegetarian) {
-        price = meatPrice;
-        amount = meatAmount;
+public abstract class Meat extends Food {
+    public Meat (int price, double amount, boolean isVegetarian) {
+        super(price, amount, isVegetarian);
     }
 }
