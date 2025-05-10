@@ -1,9 +1,16 @@
 package model.service;
 
 public class ShoppingCart {
-    String[] food = {"apple", "meat"};
+    public void allSum(int a, int b) {
+        int result = a + b;
+        System.out.println(result);
+    }
 
-    public static void main(String[] args) {
+    public int discSum (int getDiscount) {
+        return getDiscount;
+    }
 
-}
+    public int sumVeg (int amount) {
+        return amount;
+    }
 }
