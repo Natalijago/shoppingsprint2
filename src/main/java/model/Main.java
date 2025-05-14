@@ -8,8 +8,8 @@ import static model.constants.Colour.RED;
 public abstract class Main {
     public static void main(String[] args) {
         Meat meat = new Meat(100,5,false);
-        Apple greenApple = Apple.newApple(50, 10, true, GREEN);
-        Apple redApple = Apple.newApple(60,8, true, RED);
+        Apple greenApple = Apple.newApple(50, 10, GREEN);
+        Apple redApple = Apple.newApple(60,8, RED);
 
         Food[] foods = {meat, greenApple, redApple};
 
