@@ -11,7 +11,7 @@ public class Apple extends Food {
     private Apple(double price,
                   int amount,
                   String colour) {
-        super(price, amount, true);
+        super(amount, price, true);
         this.colour = colour;
     }
 

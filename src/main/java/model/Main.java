@@ -7,7 +7,7 @@ import static model.constants.Colour.RED;
 
 public abstract class Main {
     public static void main(String[] args) {
-        Meat meat = new Meat(100,5,false);
+        Meat meat = new Meat(100,5);
         Apple greenApple = Apple.newApple(50, 10, GREEN);
         Apple redApple = Apple.newApple(60,8, RED);
 
