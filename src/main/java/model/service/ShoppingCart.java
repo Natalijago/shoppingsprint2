@@ -3,18 +3,35 @@ package model.service;
 import model.Food;
 
 public class ShoppingCart {
-    private Food[] foods;
+    private final Food[] foods;
 
-    public void allSum(int a, int b) {
-        int result = a + b;
-        System.out.println(result);
+    public ShoppingCart(Food[] foods) {
+        this.foods = foods;
     }
 
-    public int discSum (int getDiscount) {
-        return getDiscount;
+    public double getTotalPriceWithoutDiscount() {
+        double total = 0;
+        for (Food food : foods) {
+            total += food.getTotalPrice();
+        }
+        return total;
     }
 
-    public int sumVeg (int amount) {
-        return amount;
+    public double getTotalPriceWithDiscount() {
+        double total = 0;
+        for (Food food : foods) {
+            total += food.getTotalPrice() - food.getDiscount();
+        }
+        return total;
     }
+
+   public double getTotalPriceVeg() {
+        double total = 0;
+        for (Food food : foods) {
+            if (food.isVegetarian()) {
+                total += food.getTotalPrice();
+            }
+        }
+        return total;
+   }
 }
