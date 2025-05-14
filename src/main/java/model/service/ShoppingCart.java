@@ -12,21 +12,26 @@ public class ShoppingCart {
     public double getTotalPriceWithoutDiscount() {
         double total = 0;
         for (Food food : foods) {
-            total += foods.getTotalPrice();
+            total += food.getTotalPrice();
         }
         return total;
     }
 
-    public void allSum(int a, int b) {
-        int result = a + b;
-        System.out.println(result);
+    public double getTotalPriceWithDiscount() {
+        double total = 0;
+        for (Food food : foods) {
+            total += food.getTotalPrice() - food.getDiscount();
+        }
+        return total;
     }
 
-    public int discSum (int getDiscount) {
-        return getDiscount;
-    }
-
-    public int sumVeg (int amount) {
-        return amount;
-    }
+   public double getTotalPriceVeg() {
+        double total = 0;
+        for (Food food : foods) {
+            if (food.isVegetarian()) {
+                total += food.getTotalPrice();
+            }
+        }
+        return total;
+   }
 }
